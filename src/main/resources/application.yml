@@ -1,0 +1,25 @@
+# jdbc connect info
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    username: chenjunxu
+    password: '@Cjx123456'
+    url: jdbc:mysql://47.240.6.154:3306/cjx?useSSL=false&characterEncoding=UTF-8
+    druid:
+      max-wait: 5000
+      min-idle: 10
+      max-active: 30
+      query-timeout: 3000
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+    database: mysql
+  mvc:
+    favicon:
+      enabled: false
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 100MB
