@@ -25,7 +25,7 @@ public interface UserDao extends JpaRepository<User, Integer>, JpaSpecificationE
 
 	Page<User> findAllByIdBefore(Integer before, Pageable pageable);
 
-	@Query(value = "select u.user_name as userName, o.org_name as orgName from t_user u, t_organization o, t_user_org uo where u.id = uo.user_id and o.id = uo.org_id", nativeQuery = true)
+	@Query(value = "select u.user_name as userName , o.org_name as orgName from t_user u, t_organization o, t_user_org uo where u.id = uo.user_id and o.id = uo.org_id", nativeQuery = true)
 	List<UserOrg> getUserOrg();
 
 }

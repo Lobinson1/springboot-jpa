@@ -6,6 +6,6 @@ package top.lobinson.entity;
  */
 public interface UserOrg {
 
-	String getUserName();
-	String getOrgName();
+	public String getUserName();
+	public String getOrgName();
 }
